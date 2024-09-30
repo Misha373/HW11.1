@@ -1,13 +1,12 @@
 ﻿using System.Text;
 Console.OutputEncoding = Encoding.UTF8;
 string[] words = { "собака", "земля", "школа", "бумага", "книга" };
-int attempts = 6;
 int wrongattempts = 0;
-
 StringBuilder guessedLetters = new StringBuilder();
 Random random = new Random();
 string randomwords = words[random.Next(0,words.Length-1)];
 int win = randomwords.Length;
+int attempts = randomwords.Length;
 Console.WriteLine("Вітаємо! Спробуйте вгадати зашифроване слово!");
 Console.WriteLine($"Кількість літер у слові: {randomwords.Length}");
 Console.WriteLine($"Кількість можливих невірних спроб: {attempts}");
